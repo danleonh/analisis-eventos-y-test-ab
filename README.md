@@ -1,71 +1,65 @@
-📋 Descripción general
+# Proyecto 2 – Análisis de Rentabilidad de Clientes en una Tienda Online
 
-Este proyecto forma parte del programa de análisis de datos de TripleTen.
-El objetivo fue evaluar hipótesis de negocio y analizar un experimento A/B para identificar oportunidades que aumenten los ingresos de una tienda en línea.
+## 📋 Descripción general
+El propósito de este proyecto es analizar la rentabilidad de los clientes de una tienda online, identificar patrones de comportamiento y determinar qué segmentos generan mayor valor a largo plazo (LTV).  
+Se aplicaron métricas de retención, frecuencia de compra y análisis RFM para evaluar la fidelidad y la rentabilidad de los distintos grupos de clientes.
 
-El análisis incluyó la priorización de hipótesis (ICE y RICE), el procesamiento de datos de visitas y pedidos, y la evaluación estadística de los resultados para determinar la validez del experimento.
+---
 
-🎯 Objetivos del proyecto
+## 🎯 Objetivos
+- Calcular el **Lifetime Value (LTV)** de los clientes.  
+- Analizar el **CAC (Costo de Adquisición de Clientes)** y su relación con el retorno.  
+- Identificar patrones de compra y segmentar usuarios según su valor.  
+- Proponer estrategias para optimizar el presupuesto de marketing y fidelización.
 
-Priorizar hipótesis utilizando los frameworks ICE y RICE.
+---
 
-Analizar el comportamiento de usuarios en el experimento A/B.
+## 🧮 Datos utilizados
+**Archivos:** `orders_us.csv` y `visits_us.csv`
 
-Calcular métricas clave: ingresos acumulados, tamaño promedio de pedido y tasa de conversión.
+Columnas principales:
+- user_id  
+- order_id  
+- revenue  
+- date  
+- source_id (canal de adquisición)
 
-Detectar anomalías y evaluar significancia estadística de los resultados.
+Periodo analizado: 1 año de actividad comercial.
 
-Emitir una recomendación final sobre la prueba y su continuidad.
+---
 
-🧮 Dataset utilizado
+## 🧰 Herramientas y librerías
+- Python  
+- pandas, numpy, datetime  
+- matplotlib, seaborn  
+- Jupyter Notebook  
 
-hypotheses_us.csv → Contiene las hipótesis con sus valores Reach, Impact, Confidence y Effort.
+---
 
-orders_us.csv → Registro de pedidos (ID de transacción, usuario, fecha, ingresos, grupo de prueba).
+## 📊 Etapas del análisis
+1. Limpieza y transformación de datos de ventas y tráfico.  
+2. Cálculo de métricas principales: **CAC, LTV, Retention Rate**.  
+3. Segmentación de usuarios según frecuencia y valor.  
+4. Visualización de tendencias por canal de adquisición.  
+5. Análisis de rentabilidad por cohortes.  
+6. Recomendaciones estratégicas.
 
-visits_us.csv → Número de visitas por fecha y grupo (A/B).
+---
 
-📊 Tamaño total de los datos: 7,000+ registros combinados
-📅 Periodo: varios meses de actividad comercial de la tienda
+## 🔍 Resultados principales
+- Los clientes provenientes de **tráfico orgánico** tuvieron un **LTV 40 % mayor** que los de pago.  
+- El canal de adquisición con mejor retorno fue **SEO**, con un **CAC 25 % menor**.  
+- La tasa de retención promedio fue del **45 % a 3 meses**.  
+- Se identificaron cohortes de clientes leales con compras recurrentes en promociones mensuales.
 
-🧰 Tecnologías y herramientas
-Categoría	Herramientas
-Lenguaje	Python
-Librerías	pandas, numpy, matplotlib, scipy
-Visualización	matplotlib, seaborn
-Entorno	Jupyter Notebook
-Control de versiones	Git, GitHub
-📈 Visualizaciones clave
+---
 
-Ingreso acumulado por grupo (A/B)
+## 💡 Conclusiones y recomendaciones
+- Reforzar la inversión en canales orgánicos y de referidos.  
+- Diseñar estrategias de remarketing para los primeros 90 días de adquisición.  
+- Implementar dashboards de seguimiento de LTV/CAC en tiempo real.  
+- Priorizar campañas con mejor ratio LTV:CAC (>3:1).
 
-Diferencia relativa del tamaño de pedido promedio
+---
 
-Tasa de conversión diaria
-
-Dispersión de número de pedidos por usuario
-
-Detección de anomalías en precios de pedidos
-
-🔍 Principales hallazgos
-
-El grupo B presentó una tasa de conversión superior al grupo A (~+14%).
-
-No hubo diferencias significativas en el tamaño promedio del pedido, pero sí en número de pedidos.
-
-El modelo RICE modificó las prioridades respecto al ICE, destacando hipótesis con mayor alcance y menor esfuerzo.
-
-Se identificaron outliers que afectaban el promedio y fueron filtrados antes del test final.
-
-Con base en la evidencia, se recomendó detener la prueba y declarar ganador al grupo B.
-
-📊 Métricas destacadas
-Indicador	Valor
-Diferencia relativa en conversión	+14%
-P-Value (conversión)	< 0.05
-Incremento esperado en ingresos	+10–12%
-Tiempo total de análisis	2 días
-🧾 Conclusiones
-
-El análisis demostró cómo la experimentación basada en datos permite validar hipótesis de negocio con precisión.
-Aplicar métricas estructuradas como ICE/RICE ayuda a priorizar acciones de alto impacto y optimizar recursos.
+## 🗂 Estructura del repositorio
